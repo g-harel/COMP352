@@ -1,0 +1,11 @@
+result = 0.0 in 293 μs
+result = 0.0 in 111 μs
+result = 0.0 in 108 μs
+result = 0.0 in 76 μs
+result = 0.0 in 614 μs
+result = 0.0 in 85 μs
+result = 0.0 in 76 μs
+result = 0.0 in 78 μs
+result = 0.0 in 64 μs
+result = 0.0 in 57 ?s
+result = 0.0 in 47 ?s

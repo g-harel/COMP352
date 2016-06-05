@@ -1,4 +1,86 @@
-Node List :
+1) 	a)	findSum(array, target) {
+			loop through all array positions {
+				if the index (target - value) exists in new array {
+					store the current index, the value (index) stored in the (target - value) position, the value at current index and (target - value)
+				}
+				if value is not already in the new array {
+					add the index of the value at the index in the new array of the value (like a hash table)
+				}
+			}
+			return all the stored solutions
+		}
+
+	b) 	The motivation was to find a way to do the algorithm without looping the array more than once and therefore keeping the complexity at O(n). This meant that I would need to store all the values that I had come across and have an easy and quick (no more loops) to find those values afterwards. A hash table-like solution was a clear choice for this and the algorithm was therefore based around that data structure.
+
+	c)	The Big-O complexity is O(n) : (n*(C+C)) ->> (n). All array elements are gone through once and a constant number of operations is done on each
+
+	d)	The Big-Ω complexity is Ω(n) : (n*(C)) ->> (n). Since the algorithm is required to find all pairs that sum to the target, it will always loop n times and will not stop when a match is found.
+
+2)  a)	findSum(array, target) {
+			loop through all array positions {
+				loop through stack {
+					if a stack_value of (target - value) is found {
+						store current index, the stack_length - stack_index, the value at current index and the value at stack_index
+					}
+				}
+				add the value of this index to the stack
+			}
+		}
+
+	b)	Since a stack can only be accessed one element at a time, it was unavoidable to have to loop through it and my previous approach could not be applied to this data structure.
+
+	c)	The Big-O complexity is O(n^2) : (n*(n*(C))) ->> (n^2). The algorithm needs to loop over each element for each element therefore resulting in this complexity.
+
+	d)	The Big-Ω complexity is Ω(n^2) : (n*(*n(C))) ->> (n^2). Similarly to last, the complexity stays the same since all pairs need to be found.
+
+3)	a)	oddFirst(array) {
+			while flag is true {
+				make flag false
+				loop through all elements in the array {
+					if the value is even {
+						swap it with the value after it
+						make flag true
+					}
+				}
+			}
+		}
+
+	b)	I could place each element from the array to either the even or the odd array and concatenate them at the end.
+
+4)	a)
+	        F
+		  /   \
+	    A       K
+	  /   \       \
+	 S	   Q        L
+	     /   \        \
+	    Y      P        M
+	  /      /   \
+	 E      R     D
+	  \
+	   U
+
+	b) [ F, A, K, S, Q, null, L, null, null, Y, P, null, M, E, null, R, D, null, null, null, U, null, null, null, null ]
+
+5)	a) 	findDepth(tree) {
+			if tree is empty {
+				return 0
+			}
+			else if tree has one value {
+				return 1
+			}
+			else {
+				recursive call on left branch
+				recursive call on right branch
+				return the biggest depth from the right or left branch +1
+			}
+		}
+
+
+
+Programming Questions
+
+Node List pseudo code description:
 
 	toString :		toString() {
 						loop through all array pos until last {

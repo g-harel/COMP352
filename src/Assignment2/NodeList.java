@@ -1,6 +1,6 @@
 package Assignment2;
 
-public class NodeList {
+public class NodeList implements NodeListTemplate {
 
     private Position[] data;
     private char rule;
@@ -86,10 +86,10 @@ public class NodeList {
     }
 
 	// finds the Position and changes its element value
-    public int set(Position pos, int val) throws ArrayIndexOutOfBoundsException {
+    public Position set(Position pos, int val) throws ArrayIndexOutOfBoundsException {
         for (int i = 1; i <= last_pos; i++) {
             if (data[i] == pos) {
-                int temp = data[i].element();
+                Position temp = data[i];
                 data[i] = new Position(val);
                 System.out.println("Set " + pos + " to " + val + "\n>" + this.toString() + "\n");
                 return temp;

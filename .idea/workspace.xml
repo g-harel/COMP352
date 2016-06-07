@@ -7,6 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="436aaf4f-e146-4247-89c6-bb56b46310c0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Assignment3/Record.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Assignment3/bst.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Assignment3/datafile.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Assignment3/test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="COMP352_Assignments.iws" />
@@ -595,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1465011740204</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="most methods finished in binary search tree class">
+      <created>1465265471502</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1465265471502</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -648,7 +659,8 @@
     <MESSAGE value="started assignment 2" />
     <MESSAGE value="assignment 2 code &quot;finished&quot;" />
     <MESSAGE value="added comments and written part" />
-    <option name="LAST_COMMIT_MESSAGE" value="added comments and written part" />
+    <MESSAGE value="most methods finished in binary search tree class" />
+    <option name="LAST_COMMIT_MESSAGE" value="most methods finished in binary search tree class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

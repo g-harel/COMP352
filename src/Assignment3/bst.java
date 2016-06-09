@@ -31,6 +31,11 @@ class bst {
         	  /*HINT: Add the Record r to the front of your linked list.*/
             r.next = this.record;
             this.record = r;
+            size++;
+        }
+
+        public String toString() {
+            return (this.keyword + " (" + ((this.l != null)?this.l.toString():" XX ") + ", " + ((this.r != null)?this.r.toString():" XX ") + ")");
         }
     }
 
@@ -39,6 +44,7 @@ class bst {
     }
 
     public void insert(String keyword, FileData fd) {
+        //System.out.println(keyword + " " + fd);
         Record recordToAdd = new Record(fd.id, fd.author, fd.title, null);
         /*TODO Write a recursive insertion that adds recordToAdd to the list of records for the node associated*/
         /*with keyword. If there is no node, this code should add the node.*/
@@ -64,28 +70,36 @@ class bst {
     	  /*TODO Write a recursive function which removes the Node with keyword from the binary search tree.*/
         /*You may not use lazy deletion and if the keyword is not in the bst, the function should do nothing.*/
         Node doomed_node = findNode(keyword, root);
-        // finding the smallest Node in the right subtree of the Node to be replaced
-        Node ambitious_node = doomed_node.r;
-        while (ambitious_node.l != null) {
-            ambitious_node = ambitious_node.l;
-        }
-        // removing reference of the smallest node from its parent
-        Node lonely_node = ambitious_node.parent;
-        if (lonely_node.l == ambitious_node) {
+        if (doomed_node != null) {
+            // finding the smallest Node in the right subtree of the Node to be replaced and removing its parent's reference
+            Node ambitious_node = doomed_node.r;
+            Node lonely_node = new Node(null, null);
+            if (ambitious_node != null) {
+                while (ambitious_node.l != null) {
+                    lonely_node = ambitious_node;
+                    ambitious_node = ambitious_node.l;
+                }
+            }
             lonely_node.l = null;
-        } else {
-            lonely_node.r = null;
+            // changing the reference of the parent of the deleted node to be the smallest Node
+            Node papa_node = doomed_node.parent;
+            if (papa_node != null && papa_node.l != null) {
+                if (papa_node.l == doomed_node) {
+                    papa_node.l = ambitious_node;
+                } else {
+                    papa_node.r = ambitious_node;
+                }
+            }
+            // setting the references of the smallest Node to be that of the Node to be deleted
+            System.out.println("\nnew process");
+            System.out.println("ambitious > " + ambitious_node);
+            System.out.println("doomed > " + doomed_node);
+            System.out.println("papa > " + papa_node);
+            System.out.println("lonely > " + lonely_node);
+            ambitious_node.l = doomed_node.l;
+            ambitious_node.r = doomed_node.r;
+            System.out.println(root);
         }
-        // changing the reference of the parent of the deleted node to be the smallest Node
-        Node papa_node = doomed_node.parent;
-        if (papa_node.l == doomed_node) {
-            papa_node.l = ambitious_node;
-        } else {
-            papa_node.r = ambitious_node;
-        }
-        // setting the references of the smallest Node to be that of the Node to be deleted
-        ambitious_node.l = doomed_node.l;
-        ambitious_node.r = doomed_node.r;
     }
 
     public void print() {
@@ -120,7 +134,9 @@ class bst {
     }
 
     private void insertNode(String keyword, Node node, Record record) {
-        if (!node.keyword.equals(keyword)) {
+        if (this.root == null) {
+            this.root = new Node(keyword, null);
+        } else if (!node.keyword.equals(keyword)) {
             if (node.keyword.compareToIgnoreCase(keyword) > 0) {
                 if (node.r == null) {
                     node.r = new Node(keyword, node.r);

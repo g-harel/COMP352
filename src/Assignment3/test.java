@@ -1,6 +1,5 @@
 package Assignment3;
 
-import java.util.Scanner;
 import java.io.*;
 
 
@@ -104,9 +103,7 @@ class test {
             this.a = new bst();
             this.b = new BufferedReader(new FileReader(filename));
             
-           /* READS DATAFILE.TXT INTO DATASTRUCTURE  */
-
-
+            /* READS DATAFILE.TXT INTO DATASTRUCTURE  */
             FileData fd;
             while ((fd = this.readNextRecord()) != null) {
                 for (int i = 0; i < fd.keywords.length; i++) {
@@ -129,21 +126,20 @@ class test {
 
     public static void main(String[] args) {
 
-        test T = new test("datafile.txt"); // THIS WILL CREATE YOUR BST AND FILL IT WITH THE INFORMATION FROM THE DATAFILE
+        test T = new test("src/Assignment3/datafile.txt"); // THIS WILL CREATE YOUR BST AND FILL IT WITH THE INFORMATION FROM THE DATAFILE
             
             /* This line of code should return the first record in the linked list for a given keyword.
              * It may be useful for your personal debugging
              */
         T.a.get_records("medical" /*Insert keyword to be found here. "medical" is an example*/).print();
 
-
         T.a.print(); // Prints titles of all elements in the bst sorted by keyword.
-
+        System.out.println(T.a.root);
         T.a.delete("medical");
         T.a.delete("learning");
         T.a.delete("concepts");
 
-        T.a.print(); //Prints bst after the 3 deletions
+//        T.a.print(); //Prints bst after the 3 deletions
         // THIS AREA IS FOR YOUR USE TO HELP TEST THAT YOUR BST WORKS
     }
 }

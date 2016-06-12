@@ -128,18 +128,17 @@ class test {
 
         test T = new test("src/Assignment3/datafile.txt"); // THIS WILL CREATE YOUR BST AND FILL IT WITH THE INFORMATION FROM THE DATAFILE
             
-            /* This line of code should return the first record in the linked list for a given keyword.
-             * It may be useful for your personal debugging
-             */
+        /* This line of code should return the first record in the linked list for a given keyword.
+         * It may be useful for your personal debugging
+         */
         T.a.get_records("medical" /*Insert keyword to be found here. "medical" is an example*/).print();
-
+        System.out.println();
         T.a.print(); // Prints titles of all elements in the bst sorted by keyword.
-        System.out.println(T.a.root);
         T.a.delete("medical");
         T.a.delete("learning");
         T.a.delete("concepts");
 
-//        T.a.print(); //Prints bst after the 3 deletions
+        T.a.print(); //Prints bst after the 3 deletions
         // THIS AREA IS FOR YOUR USE TO HELP TEST THAT YOUR BST WORKS
     }
 }

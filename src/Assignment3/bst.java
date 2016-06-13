@@ -25,6 +25,16 @@ class bst {
             this.record = r;
         }
 
+        private Node unlink() {
+            Node lonely = this.parent;
+            if (lonely.r == this) {
+                lonely.r = null;
+            } else {
+                lonely.l = null;
+            }
+            return this;
+        }
+
         public String toString() {
             return (this.keyword + " (" + ((this.l != null)?this.l.toString():" XX ") + ", " + ((this.r != null)?this.r.toString():" XX ") + ")");
         }
@@ -73,12 +83,7 @@ class bst {
         }
         target.keyword = source.keyword;
         target.record = source.record;
-        Node lonely = source.parent;
-        if (lonely.r == source) {
-            lonely.r = null;
-        } else {
-            lonely.l = null;
-        }
+        source.unlink();
     }
 
     public void print() {

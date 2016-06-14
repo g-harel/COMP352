@@ -35,7 +35,7 @@ class FileData {
 class test {
 
     BufferedReader b;
-    avl a;
+    bst a;
 
     public FileData readNextRecord() {
         if (b == null) {
@@ -71,7 +71,7 @@ class test {
 
     public test(String filename) {
         try {
-            this.a = new avl();
+            this.a = new bst();
             this.b = new BufferedReader(new FileReader(filename));
             FileData fd;
             while ((fd = this.readNextRecord()) != null) {
@@ -94,11 +94,11 @@ class test {
 
     public static void main(String[] args) {
         test T = new test("src/Assignment3/datafile.txt");
-//        T.a.get_records("medical").print();
-//        T.a.delete("medical");
-//        T.a.delete("learning");
-//        T.a.delete("concepts");
-//        T.a.print();
+        T.a.get_records("medical").print();
+        T.a.delete("medical");
+        T.a.delete("learning");
+        T.a.delete("concepts");
+        T.a.print();
         System.out.println(T.a.root);
     }
 }

@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="436aaf4f-e146-4247-89c6-bb56b46310c0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="COMP352_Assignments.iws" />
@@ -57,8 +56,8 @@
       <file leaf-file-name="test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Assignment3/test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -663,7 +662,14 @@
       <option name="project" value="LOCAL" />
       <updated>1465869110453</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="assignment submitted, last commit">
+      <created>1466012978790</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1466012978790</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -723,7 +729,8 @@
     <MESSAGE value="finished part 1 of programming part" />
     <MESSAGE value="depth and balance working for avl tree (not deletions)" />
     <MESSAGE value="finished assignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished assignment" />
+    <MESSAGE value="assignment submitted, last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="assignment submitted, last commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1096,8 +1103,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Assignment3/test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="450">
+          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
           <folding />
         </state>
       </provider>
